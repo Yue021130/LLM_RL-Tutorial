@@ -185,7 +185,10 @@ def _get_input_embeds(
     if attention_mask is not None:
         attention_mask = attention_mask.to(inputs_embeds.device)
 
-    return inputs_embeds, attention_mask
+    return {
+        "inputs_embeds": inputs_embeds,
+        "attention_mask": attention_mask,
+    }
 
 
 def qwen2_vl_base_forward(
@@ -204,9 +207,10 @@ def qwen2_vl_base_forward(
         # see https://github.com/huggingface/transformers/pull/39447
         raise ValueError("position_ids should be a 3D tensor of shape (4, batch_size, seq_length).")
 
-    kwargs["inputs_embeds"], kwargs["attention_mask"] = _get_input_embeds(
+    input_kwargs = _get_input_embeds(
         self, input_ids, attention_mask, pixel_values, pixel_values_videos, image_grid_thw, video_grid_thw
-    )  # avoid lora module to have multiple keyword arguments
+    )
+    kwargs.update(input_kwargs)  # avoid lora module to have multiple keyword arguments
     outputs = self.language_model(input_ids=None, **kwargs)
 
     return Qwen2VLModelOutputWithPast(
