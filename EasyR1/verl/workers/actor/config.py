@@ -21,6 +21,25 @@ from typing import Any, Optional
 
 
 @dataclass
+class LoraConfig:
+    rank: int = 0
+    alpha: int = 64
+    target_modules: str = "all-linear"
+    exclude_modules: Optional[str] = None
+
+    def post_init(self):
+        if not isinstance(self.target_modules, str):
+            raise TypeError("lora.target_modules must be a string like 'all-linear' or 'q_proj,k_proj,v_proj,o_proj'.")
+
+        self.target_modules = self.target_modules.strip()
+        if self.exclude_modules is not None:
+            if not isinstance(self.exclude_modules, str):
+                raise TypeError("lora.exclude_modules must be a string like '.*visual.*'.")
+
+            self.exclude_modules = self.exclude_modules.strip()
+
+
+@dataclass
 class ModelConfig:
     model_path: Optional[str] = None
     tokenizer_path: Optional[str] = None
@@ -28,6 +47,7 @@ class ModelConfig:
     enable_gradient_checkpointing: bool = True
     trust_remote_code: bool = True
     freeze_vision_tower: bool = False
+    lora: LoraConfig = field(default_factory=LoraConfig)
 
     def post_init(self):
         if self.tokenizer_path is None:
