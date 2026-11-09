@@ -8,3 +8,4 @@ poetry.lock
 *.png
 .env
 CLAUDE.md
+.idea
