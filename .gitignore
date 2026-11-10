@@ -1,0 +1,12 @@
+# 跨项目通用忽略
+CLAUDE.md
+.idea/
+.ipynb_checkpoints/
+.env
+
+# 训练产物（任何子项目下都可能产生）
+**/wandb/
+**/outputs/
+**/multirun/
+
+# 各子项目自身的 .gitignore 已在合并历史中带入，此文件只补充根级规则
