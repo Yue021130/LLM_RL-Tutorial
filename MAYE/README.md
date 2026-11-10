@@ -1,3 +1,15 @@
+# RL-MAYE：MAYE 源码精读与注释版
+
+> **本仓库是什么**：对 [GAIR-NLP/MAYE](https://github.com/GAIR-NLP/MAYE) 的**个人学习分支**。原项目历史完整保留；我会在代码中逐行添加中文注释与阅读笔记，作为对 VLM 强化学习训练框架的精读记录。
+>
+> **原项目**：MAYE 是论文 *Rethinking RL Scaling for Vision Language Models*（arXiv:2504.02587）的官方实现——一个不依赖任何现有 RL 工具库、从零搭建的视觉语言模型强化学习训练框架与评测方案。
+>
+> **本仓库的改动**：仅增加注释、笔记与说明文档，不改变训练逻辑。所有学术 credit 归原作者，引用请使用文末的官方 BibTeX。
+
+---
+
+# 原项目 README
+
 # <img src="./assets/logo.png" alt="Logo" width="28" style="vertical-align: middle;"/>Rethinking RL Scaling for Vision Language Models: A Transparent, From-Scratch Framework and Comprehensive Evaluation Scheme
 
 <div align="center">
