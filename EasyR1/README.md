@@ -1,3 +1,15 @@
+# EasyR1：源码精读与注释版
+
+> **本目录是什么**：对 [hiyouga/EasyR1](https://github.com/hiyouga/EasyR1) 的**个人学习镜像**，属于 RL-Tutorial 合集的一部分。上游 commit 历史完整保留；我会在代码中逐行添加中文注释与阅读笔记，作为对 veRL 系多模态 RL 框架的精读记录。
+>
+> **原项目**：EasyR1 是基于 veRL 的高效可扩展多模态 RL 训练框架（LLaMA-Factory 作者出品），支持 GRPO、DAPO、Reinforce++、ReMax、RLOO、GSPO、CISPO 等算法。
+>
+> **本目录的改动**：仅增加注释、笔记与说明文档，不改变训练逻辑。所有 credit 归原作者，License 为 Apache-2.0。
+
+---
+
+# 原项目 README
+
 # EasyR1: An Efficient, Scalable, Multi-Modality RL Training Framework
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/hiyouga/EasyR1)](https://github.com/hiyouga/EasyR1/stargazers)

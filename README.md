@@ -8,7 +8,7 @@
 |---|---|---|---|
 | [MAYE](./MAYE) | [GAIR-NLP/MAYE](https://github.com/GAIR-NLP/MAYE) | 教学透明 | 从零手写 Reinforce++，只用 Transformers + FSDP2 + vLLM，单文件 recipe 讲清原理 |
 | [EasyR1](./EasyR1) | [hiyouga/EasyR1](https://github.com/hiyouga/EasyR1) | 生产框架 | 基于 veRL + Ray + vLLM SPMD，支持 GRPO/DAPO/Reinforce++/RLOO 等 7 种算法 |
-| [VLM-R1](./VLM-R1) | [om-ai-lab/VLM-R1](https://github.com/om-ai-lab/VLM-R1) | 任务工程化 | 基于 open-r1 改造的 GRPO 训练，落地检测、定位、GUI 等任务 |
+| VLM-R1（待补充） | [om-ai-lab/VLM-R1](https://github.com/om-ai-lab/VLM-R1) | 任务工程化 | 基于 open-r1 改造的 GRPO 训练，落地检测、定位、GUI 等任务 |
 
 ## 推荐阅读路径
 
@@ -22,6 +22,6 @@
 
 - MAYE：MIT
 - EasyR1：Apache-2.0
-- VLM-R1：Apache-2.0
+- VLM-R1：Apache-2.0（待引入）
 
 各子目录中的原始 README、LICENSE 与引用信息均完整保留。
